@@ -90,6 +90,7 @@ function generateHtml() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
         <title>Team Profile Page</title>
     </head>
     <body>
@@ -97,7 +98,9 @@ function generateHtml() {
             <span class="navbar-brand mb-0 h1 w-100 text-center text-light bg-info">Team Profile Page</span>
         </nav>
         <div class="container">
+        <div class="row justify-content-center">
             ${htmlTag}
+        </div>
         </div>
     </body>
   </html>`;
@@ -117,7 +120,7 @@ function writeHtml(employee) {
   if (role === "Engineer") {
     const github = employee.getGithub();
     data = `
-  <div class="d-flex flex-wrap col-4 mt-4 w-100">
+  <div class="col-4 mt-4">
         <div class="card h-100 text-light bg-primary mb-3">
             <div class="card-header text-center">
                 <h3>${name}</h3>
@@ -133,7 +136,7 @@ function writeHtml(employee) {
   } else if (role === "Intern") {
     const school = employee.getSchool();
     data = `
-<div class="d-flex flex-wrap col-4 mt-4 w-100">
+<div class="col-4 mt-4">
     <div class="card h-100 text-light bg-success mb-3">
         <div class="card-header text-center">
             <h3>${name}</h3>
@@ -149,7 +152,7 @@ function writeHtml(employee) {
   } else {
     const officeNumber = employee.getOfficeNumber();
     data = `
-<div class="d-flex flex-wrap col-4 mt-4 w-100">
+<div class="col-4 mt-4">
     <div class="card h-100 text-light bg-danger mb-3">
         <div class="card-header text-center">
             <h3>${name}</h3>
