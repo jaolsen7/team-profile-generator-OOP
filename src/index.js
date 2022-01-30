@@ -97,7 +97,7 @@ function generateHtml() {
             <span class="navbar-brand mb-0 h1 w-100 text-center text-light bg-info">Team Profile Page</span>
         </nav>
         <div class="container">
-          ${htmlTag}
+            ${htmlTag}
         </div>
     </body>
   </html>`;
@@ -116,7 +116,8 @@ function writeHtml(employee) {
   let data = "";
   if (role === "Engineer") {
     const github = employee.getGithub();
-    data = `<div class="col-5 mt-4">
+    data = `
+  <div class="d-flex flex-wrap col-4 mt-4 w-100">
         <div class="card h-100 text-light bg-primary mb-3">
             <div class="card-header text-center">
                 <h3>${name}</h3>
@@ -131,7 +132,8 @@ function writeHtml(employee) {
     </div>`;
   } else if (role === "Intern") {
     const school = employee.getSchool();
-    data = `<div class="col-5 mt-4">
+    data = `
+<div class="d-flex flex-wrap col-4 mt-4 w-100">
     <div class="card h-100 text-light bg-success mb-3">
         <div class="card-header text-center">
             <h3>${name}</h3>
@@ -142,12 +144,13 @@ function writeHtml(employee) {
             <p>Email:<a href="mailto:${email}"> ${email}</a></p>
             <p>School: ${school}</p>
         </div>
-</div>
+    </div>
 </div>`;
   } else {
     const officeNumber = employee.getOfficeNumber();
-    data = `<div class="col-5 mt-4">
-    <div class="card h-100 text-white bg-danger mb-3">
+    data = `
+<div class="d-flex flex-wrap col-4 mt-4 w-100">
+    <div class="card h-100 text-light bg-danger mb-3">
         <div class="card-header text-center">
             <h3>${name}</h3>
             <h4>Manager</h4>
