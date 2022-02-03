@@ -6,7 +6,7 @@ This project was very challenging but also very rewarding. It involves using Nod
 
 ## Installation
 
-You can git clone my project. In order to run index.js, open an Integrated terminal in the src folder. My code works according to this folder, don't think this is conventional oops.
+You can git clone my project. In order to run index.js, open an Integrated terminal and type "node src/index.js". You can find a walkthrough here: [https://watch.screencastify.com/v/H0JSNxrG9N0MWfbpIbnK](https://watch.screencastify.com/v/H0JSNxrG9N0MWfbpIbnK)
 
 ## Usage
 
@@ -18,4 +18,4 @@ I had a little help from my tutor, Omar Carmona, but most guidance was by my pro
 
 ## Tests
 
-I wrote tests, as this was the original part of the assignment, however, I could not figure out how to get them to run.
+Tests were given by the course instructor as a means to practice test-driven development.

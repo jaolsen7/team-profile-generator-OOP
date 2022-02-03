@@ -104,7 +104,7 @@ function generateHtml() {
         </div>
     </body>
   </html>`;
-  fs.writeFile("../dist/team.html", html, function (err) {
+  fs.writeFile("./dist/team.html", html, function (err) {
     if (err) {
       console.log(err);
     }
